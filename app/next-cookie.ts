@@ -34,5 +34,6 @@ export async function setCookie(
 export async function getCookie(name: string): Promise<string | undefined> {
   const cookieStore = await cookies();
   const value = cookieStore.get(name)?.value;
+  console.log(value);
   return value;
 }
